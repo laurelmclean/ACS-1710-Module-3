@@ -39,7 +39,9 @@ Gif Search
         gif['media'][0]['gif']['url'] -->
 
     <p>
-        <img src="https://your/gif/url/goes/here" alt="GIF">
+        {% for gif in gifs %}
+            <img src="{{ gif.media_formats.gif.url }}" alt="GIF">
+        {% endfor %}
     </p>
 </section>
 
